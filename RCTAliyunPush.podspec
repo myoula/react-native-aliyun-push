@@ -1,9 +1,6 @@
 require "json"
 version = JSON.parse(File.read("package.json"))["version"]
 
-source 'https://github.com/CocoaPods/Specs.git'
-source 'https://github.com/aliyun/aliyun-specs.git'
-
 Pod::Spec.new do |spec|
 
   spec.name         = "RCTAliyunPush"
