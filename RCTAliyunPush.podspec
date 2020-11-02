@@ -1,6 +1,9 @@
 require "json"
 version = JSON.parse(File.read("package.json"))["version"]
 
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/aliyun/aliyun-specs.git'
+
 Pod::Spec.new do |spec|
 
   spec.name         = "RCTAliyunPush"
@@ -13,10 +16,10 @@ Pod::Spec.new do |spec|
   spec.tvos.deployment_target = "9.0"
   spec.source         = { :git => 'https://github.com/a188658587/react-native-aliyun-push.git', :tag => "v#{spec.version}"}
   spec.source_files  =  "ios/**/*.{h,m}"
-  spec.vendored_frameworks = "ios/libs/AlicloudUtils.framework","ios/libs/CloudPushSDK.framework","ios/libs/UTDID.framework","ios/libs/UTMini.framework"
+  spec.dependency 'AlicloudPush', '~> 1.9.9'
   spec.libraries = "z", "resolv", "sqlite3"
 
   spec.requires_arc = true
 
-  spec.dependency "React"
+  spec.dependency "React-Core"
 end
