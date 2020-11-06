@@ -32,4 +32,8 @@ export default class AliyunPuth {
    * 解绑账号
    */
   static unbindAccount(): Promise<string>;
+  /**
+   * 设置桌面图标角标数字 (ios支持，android支持绝大部分手机)
+   */
+  static setApplicationIconBadgeNumber(num: number): void;
 }
