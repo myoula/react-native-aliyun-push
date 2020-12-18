@@ -1,51 +1,8 @@
 # react-native-aliyun-push
 
-[![npm](https://img.shields.io/npm/v/react-native-aliyun-push.svg?style=flat-square)](https://www.npmjs.com/package/react-native-aliyun-push)
+[![npm](https://img.shields.io/npm/v/@hengkx/react-native-aliyun-push.svg?style=flat-square)](https://www.npmjs.com/package/@hengkx/react-native-aliyun-push)
 
 [阿里云移动推送](https://www.aliyun.com/product/cps?spm=5176.2020520107.0.0.fgXGFp)react-native 封装组件
-
-<details>
-  <summary>修改履历</summary> 
-v1.0.22
-
-1. 修正 alicloud-android-utdid Android 编译错误
-2. 更新阿里云移动推送 SDK
-
-v1.0.21
-
-1. 修正 android 编译配置
-
-v1.0.20
-
-1. 升级阿里云移动推送 sdk ios v1.9.9
-
-v1.0.19
-
-1. 更新了第三方辅助通道 SDK 至 3.0.9
-2. 升级阿里云移动推送 sdk android v3.1.6
-3. 更新 Android buildTools 版本至 28.0.3
-
-v1.0.18
-
-1. 更新了第三方辅助通道 SDK 至 3.0.6，支持了 OPPO
-
-v1.0.17
-
-1. add AliyunPush.removeAllListeners()
-2. 修复 MIUIUtils 类中 isMIUI 方法 android 8.0 以上异常
-
-v1.0.16
-
-1. 修复 ios 低版本收到通知后闪退问题
-
-v1.0.15
-
-1. 增加 getInitialMessage 方法
-2. add sample
-
-[[more]](https://github.com/wonday/react-native-aliyun-push/releases)
-
-</details>
 
 ## 前提
 
@@ -54,17 +11,10 @@ v1.0.15
 
 ## 安装
 
-ReactNative 0.59.x 及以前
-
-```
-npm install react-native-aliyun-push --save
-react-native link react-native-aliyun-push
-```
-
 ReactNative 0.60.x 及以后
 
 ```
-yarn add react-native-aliyun-push
+yarn add @hengkx/react-native-aliyun-push
 ```
 
 <details>
