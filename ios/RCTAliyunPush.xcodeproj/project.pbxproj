@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		52AE78811EEAA3F4005ECD74 /* AliyunPushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AE78801EEAA3F4005ECD74 /* AliyunPushManager.m */; };
+		E2486BDB26847CC1006873F6 /* UTMini.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2486BD526847CBF006873F6 /* UTMini.framework */; };
+		E2486BDC26847CC1006873F6 /* AlicloudSender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2486BD626847CBF006873F6 /* AlicloudSender.framework */; };
+		E2486BDD26847CC1006873F6 /* CloudPushSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2486BD726847CC0006873F6 /* CloudPushSDK.framework */; };
+		E2486BDE26847CC1006873F6 /* EMASRest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2486BD826847CC0006873F6 /* EMASRest.framework */; };
+		E2486BDF26847CC1006873F6 /* AlicloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2486BD926847CC1006873F6 /* AlicloudUtils.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +32,11 @@
 		5261D9F122145D6A00E75A23 /* libs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libs; sourceTree = "<group>"; };
 		52AE787F1EEAA3F4005ECD74 /* AliyunPushManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliyunPushManager.h; sourceTree = "<group>"; };
 		52AE78801EEAA3F4005ECD74 /* AliyunPushManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliyunPushManager.m; sourceTree = "<group>"; };
+		E2486BD526847CBF006873F6 /* UTMini.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTMini.framework; sourceTree = "<group>"; };
+		E2486BD626847CBF006873F6 /* AlicloudSender.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudSender.framework; sourceTree = "<group>"; };
+		E2486BD726847CC0006873F6 /* CloudPushSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CloudPushSDK.framework; sourceTree = "<group>"; };
+		E2486BD826847CC0006873F6 /* EMASRest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EMASRest.framework; sourceTree = "<group>"; };
+		E2486BD926847CC1006873F6 /* AlicloudUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudUtils.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +44,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2486BDC26847CC1006873F6 /* AlicloudSender.framework in Frameworks */,
+				E2486BDD26847CC1006873F6 /* CloudPushSDK.framework in Frameworks */,
+				E2486BDE26847CC1006873F6 /* EMASRest.framework in Frameworks */,
+				E2486BDB26847CC1006873F6 /* UTMini.framework in Frameworks */,
+				E2486BDF26847CC1006873F6 /* AlicloudUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +75,11 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				E2486BD626847CBF006873F6 /* AlicloudSender.framework */,
+				E2486BD926847CC1006873F6 /* AlicloudUtils.framework */,
+				E2486BD726847CC0006873F6 /* CloudPushSDK.framework */,
+				E2486BD826847CC0006873F6 /* EMASRest.framework */,
+				E2486BD526847CBF006873F6 /* UTMini.framework */,
 				5261D9F122145D6A00E75A23 /* libs */,
 				27F5D7ED1D0BC820003F92DE /* RCTAliyunPush */,
 				134814211AA4EA7D00B7C361 /* Products */,
@@ -105,6 +125,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
