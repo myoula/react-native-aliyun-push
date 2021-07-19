@@ -54,5 +54,5 @@ dependencies {
     // 魅族依赖
     api 'com.aliyun.ams:alicloud-android-third-push-meizu:3.4.0'
     // 谷歌依赖
-    api 'com.aliyun.ams:alicloud-android-third-push-fcm:3.4.0'
+    // api 'com.aliyun.ams:alicloud-android-third-push-fcm:3.4.0'
 }
