@@ -40,7 +40,11 @@ dependencies {
 
     implementation "me.leolin:ShortcutBadger:1.1.22@aar"
 
-    api 'com.aliyun.ams:alicloud-android-push:3.4.0'
+    //如果还有其他阿里插件
+    api ('com.aliyun.ams:alicloud-android-push:3.4.0')
+    {
+        exclude module:'alicloud-android-utdid'
+    }
 
     api 'com.aliyun.ams:alicloud-android-third-push:3.4.0'
     // 华为依赖
