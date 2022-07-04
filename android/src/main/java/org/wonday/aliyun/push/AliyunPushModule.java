@@ -22,6 +22,9 @@ import android.content.Context;
 import android.os.Handler;
 import android.util.Log;
 
+import android.graphics.Color;
+import android.os.Build;
+
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
