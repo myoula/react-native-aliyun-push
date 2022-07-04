@@ -30,6 +30,12 @@ export default class AliyunPuth {
    * 同步角标数到阿里云服务端 (仅ios支持)
    */
   static syncBadgeNum(num: number): void;
+
+  /**
+   * 初始化
+   */
+   static initCloudChannel(key: string, secret: string): Promise<string>;
+
   /**
    * 获取初始消息
    */

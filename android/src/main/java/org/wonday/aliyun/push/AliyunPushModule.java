@@ -66,6 +66,75 @@ public class AliyunPushModule extends ReactContextBaseJavaModule implements Life
     }
 
     @ReactMethod
+    public void initCloudChannel(String key, String secret, final Promise promise) {
+
+        // 创建notificaiton channel
+        this.createNotificationChannel();
+        PushServiceFactory.init(this.context);
+        CloudPushService pushService = PushServiceFactory.getCloudPushService();
+        pushService.setLogLevel(CloudPushService.LOG_INFO);
+        //pushService.setNotificationSmallIcon(R.mipmap.ic_launcher);//设置通知栏小图标， 需要自行添加
+        pushService.register(this.context, new CommonCallback() {
+            @Override
+            public void onSuccess(String resp) {
+                // success
+                promise.resolve(resp);
+            }
+            @Override
+            public void onFailed(String code, String message) {
+                // failed
+                promise.reject(message);
+            }
+        });
+
+        // 关于第三方推送通道的设置，请仔细阅读阿里云文档
+        // https://help.aliyun.com/document_detail/30067.html?spm=a2c4g.11186623.6.589.598b7fa8vf9qWF
+
+        // 注册方法会自动判断是否支持小米系统推送，如不支持会跳过注册。
+        // MiPushRegister.register(applicationContext, "小米AppID", "小米AppKey");
+
+        // // 注册方法会自动判断是否支持华为系统推送，如不支持会跳过注册。
+        // HuaWeiRegister.register(this);
+
+        // // 接入FCM/GCM初始化推送
+        // GcmRegister.register(applicationContext, "send_id", "application_id");
+
+        // // OPPO通道注册
+        // OppoRegister.register(applicationContext, "appKey", "appSecret"); // appKey/appSecret在OPPO通道开发者平台获取
+
+        // // 魅族通道注册
+        // MeizuRegister.register(applicationContext, "appId", "appkey"); // appId/appkey在魅族开发者平台获取
+
+        // // VIVO通道注册
+        // VivoRegister.register(applicationContext);
+
+    }
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationManager mNotificationManager = (NotificationManager) this.context.getSystemService(Context.NOTIFICATION_SERVICE);
+            // 通知渠道的id
+            String id = "1";
+            // 用户可以看到的通知渠道的名字.
+            CharSequence name = "notification channel";
+            // 用户可以看到的通知渠道的描述
+            String description = "notification description";
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            NotificationChannel mChannel = new NotificationChannel(id, name, importance);
+            // 配置通知渠道的属性
+            mChannel.setDescription(description);
+            // 设置通知出现时的闪灯（如果 android 设备支持的话）
+            mChannel.enableLights(true);
+            mChannel.setLightColor(Color.RED);
+            // 设置通知出现时的震动（如果 android 设备支持的话）
+            mChannel.enableVibration(true);
+            mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+            //最后在notificationmanager中创建该通知渠道
+            mNotificationManager.createNotificationChannel(mChannel);
+        }
+    }
+
+    @ReactMethod
     public void getDeviceId(final Promise promise) {
         String deviceID = PushServiceFactory.getCloudPushService().getDeviceId();
         if (deviceID!=null && deviceID.length()>0) {

@@ -43,6 +43,10 @@ export default class AliyunPush {
         return AliyunPushNative.getDeviceId();
     }
 
+    static initCloudChannel = (key, secret) => {
+        return AliyunPushNative.initCloudChannel(key, secret);
+    }
+
     static getInitialMessage = () => {
         return AliyunPushNative.getInitialMessage().then(e => {
             if(e && e.extraStr) {
