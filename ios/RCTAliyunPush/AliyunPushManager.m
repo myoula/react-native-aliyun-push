@@ -128,8 +128,8 @@ RCT_EXPORT_METHOD(syncBadgeNum:(NSInteger) num
 /**
  * initCloudChannel
  */
-RCT_EXPORT_METHOD(initCloudChannel:(NSString *)key 
-                  (NSString *)secret 
+RCT_EXPORT_METHOD(initCloudChannel:(NSString *)key
+                  (NSString *)secret
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 {
