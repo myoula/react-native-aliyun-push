@@ -129,13 +129,13 @@ RCT_EXPORT_METHOD(syncBadgeNum:(NSInteger) num
  * initCloudChannel
  */
 RCT_EXPORT_METHOD(initCloudChannel:(NSString *)key
-                  (NSString *)secret
+                  secret:(NSString *)secret
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 {
     [CloudPushSDK asyncInit:key appSecret:secret callback:^(CloudPushCallbackResult *res) {
         if (res.success) {
-            resolver(@"ok")
+            resolve(@"ok");
         } else {
             reject([NSString stringWithFormat:@"%ld",(long)res.error.code], res.error.localizedDescription,res.error);
         }
